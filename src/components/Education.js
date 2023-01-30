@@ -12,32 +12,20 @@ export default class Education extends Component {
         <form action="#">
           <p>
             <label>
-              Company:
-              <input type="text" name="company" />
+              School:
+              <input type="text" name="school" />
             </label>
           </p>
           <p>
             <label>
-              Title:
+              Diploma:
               <input type="text" name="title" />
             </label>
           </p>
           <p>
             <label>
-              Tasks:
-              <input type="text" name="tasks" />
-            </label>
-          </p>
-          <p>
-            <label>
-              From:
-              <input type="date" name="email" />
-            </label>
-          </p>
-          <p>
-            <label>
-              To:
-              <input type="date" name="phone" />
+              Graduation:
+              <input type="date" name="tasks" />
             </label>
           </p>
         </form>
