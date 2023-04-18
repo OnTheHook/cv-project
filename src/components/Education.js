@@ -8,7 +8,15 @@ export default class Education extends Component {
     this.handleAddEducation = this.handleAddEducation.bind(this);
     this.handleDeleteEducation = this.handleDeleteEducation.bind(this);
     this.state = {
-      education: [],
+      education: [
+        {
+          // key: uuidv4(),
+          school: "abc",
+          diploma: "engineering",
+          from: "2020",
+          to: "2024",
+        },
+      ],
     };
   }
 
@@ -32,7 +40,7 @@ export default class Education extends Component {
     const newEducation = this.state.education.filter(
       (educationItem) => educationItem.key !== key
     );
-    
+
     this.setState({
       education: [...newEducation],
     });
@@ -51,8 +59,10 @@ export default class Education extends Component {
         />
       );
     });
+
     return (
       <div>
+        <h1>Education</h1>
         <button onClick={this.handleAddEducation}>
           Add Education Experience
         </button>

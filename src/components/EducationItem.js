@@ -38,7 +38,6 @@ export default class EducationItem extends Component {
   render() {
     let form = (
       <div>
-        <h1>Education</h1>
         <form action="#">
           <p>
             <label>
@@ -49,23 +48,23 @@ export default class EducationItem extends Component {
           <p>
             <label>
               Diploma:
-              <input type="text" name="title" value={this.state.education} />
+              <input type="text" name="title" value={this.state.diploma} />
             </label>
           </p>
           <p>
             <label>
               From:
-              <input type="date" name="from" value={this.state.from} />
+              <input type="text" name="from" value={this.state.from} />
             </label>
           </p>
           <p>
             <label>
               To:
-              <input type="date" name="from" value={this.state.from} />
+              <input type="text" name="from" value={this.state.to} />
             </label>
           </p>
           <button onClick={this.handleSubmit}>Submit</button>
-          <button onClick={this.props.onDelete(this.props.id)}>Delete</button>
+          <button>Delete</button>
         </form>
       </div>
     );
@@ -74,7 +73,9 @@ export default class EducationItem extends Component {
       <div>
         <h2>School: {this.state.school}</h2>
         <h2>Diploma: {this.state.diploma}</h2>
-        <h2>Graduation: {this.state.graduation}</h2>
+        <h2>From: {this.state.from}</h2>
+        <h2>To: {this.state.to}</h2>
+        <button onClick={this.handleEdit}>Edit</button>
       </div>
     );
 

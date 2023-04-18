@@ -6,7 +6,7 @@ class Profile extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
-    this.handleTextAreaChange = this.handleTextAreaChange.bind(this)
+    this.handleTextAreaChange = this.handleTextAreaChange.bind(this);
     this.state = {
       firstName: "",
       lastName: "",
@@ -29,11 +29,10 @@ class Profile extends Component {
 
   handleTextAreaChange(e) {
     e.preventDefault();
-    const value = e.target.value
+    const value = e.target.value;
     this.setState({
-      description: value
-    })
-
+      description: value,
+    });
   }
 
   handleSubmit(e) {
@@ -105,10 +104,13 @@ class Profile extends Component {
           </label>
         </p>
         <p>
-          <label>
-            Description:
-            <textarea cols="100" rows="20" onChange={(e)=>this.handleTextAreaChange(e)}>{this.state.description}</textarea>
-          </label>
+          Description:
+          <textarea
+            cols="100"
+            rows="20"
+            onChange={(e) => this.handleTextAreaChange(e)}
+            value={this.state.description}
+          ></textarea>
         </p>
 
         <button
