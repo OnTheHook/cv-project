@@ -42,29 +42,51 @@ export default class EducationItem extends Component {
           <p>
             <label>
               School:
-              <input type="text" name="school" value={this.state.school} />
+              <input
+                type="text"
+                name="school"
+                value={this.state.school}
+                onChange={(e) => this.handleChange(e)}
+              />
             </label>
           </p>
           <p>
             <label>
               Diploma:
-              <input type="text" name="title" value={this.state.diploma} />
+              <input
+                type="text"
+                name="diploma"
+                value={this.state.diploma}
+                onChange={(e) => this.handleChange(e)}
+              />
             </label>
           </p>
           <p>
             <label>
               From:
-              <input type="text" name="from" value={this.state.from} />
+              <input
+                type="text"
+                name="from"
+                value={this.state.from}
+                onChange={(e) => this.handleChange(e)}
+              />
             </label>
           </p>
           <p>
             <label>
               To:
-              <input type="text" name="from" value={this.state.to} />
+              <input
+                type="text"
+                name="to"
+                value={this.state.to}
+                onChange={(e) => this.handleChange(e)}
+              />
             </label>
           </p>
-          <button onClick={this.handleSubmit}>Submit</button>
-          <button>Delete</button>
+          <button onClick={(e) => this.handleSubmit(e)}>Submit</button>
+          <button onClick={(e) => this.props.onDelete(e, this.props.id)}>
+            Delete
+          </button>
         </form>
       </div>
     );
@@ -75,7 +97,7 @@ export default class EducationItem extends Component {
         <h2>Diploma: {this.state.diploma}</h2>
         <h2>From: {this.state.from}</h2>
         <h2>To: {this.state.to}</h2>
-        <button onClick={this.handleEdit}>Edit</button>
+        <button onClick={(e) => this.handleEdit(e)}>Edit</button>
       </div>
     );
 

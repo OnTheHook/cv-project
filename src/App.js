@@ -3,7 +3,7 @@ import "./styles/App.css";
 import Profile from "./components/Profile";
 import Education from "./components/Education";
 import Skills from "./components/Skills"; 
-import WorkExperience from "./components/WorkExperience";
+import Experience from "./components/Experience";
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <Profile />
-        <WorkExperience />
+        <Experience />
         <Education />
         <Skills />
       </div>

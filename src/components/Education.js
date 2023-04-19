@@ -10,7 +10,7 @@ export default class Education extends Component {
     this.state = {
       education: [
         {
-          // key: uuidv4(),
+          key: uuidv4(),
           school: "abc",
           diploma: "engineering",
           from: "2020",
@@ -26,7 +26,7 @@ export default class Education extends Component {
       education: [
         ...this.state.education,
         {
-          // key: uuidv4(),
+          key: uuidv4(),
           school: "",
           diploma: "",
           from: "",
@@ -36,7 +36,8 @@ export default class Education extends Component {
     });
   }
 
-  handleDeleteEducation(key) {
+  handleDeleteEducation(e, key) {
+    e.preventDefault();
     const newEducation = this.state.education.filter(
       (educationItem) => educationItem.key !== key
     );
@@ -50,7 +51,8 @@ export default class Education extends Component {
     const educationItems = this.state.education.map((educationItem) => {
       return (
         <EducationItem
-          // id={educationItem.key}
+          key={educationItem.key}
+          id={educationItem.key}
           school={educationItem.school}
           diploma={educationItem.diploma}
           from={educationItem.from}
