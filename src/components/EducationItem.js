@@ -92,12 +92,17 @@ export default class EducationItem extends Component {
     );
 
     let final = (
-      <div>
-        <h2>School: {this.state.school}</h2>
-        <h2>Diploma: {this.state.diploma}</h2>
-        <h2>From: {this.state.from}</h2>
-        <h2>To: {this.state.to}</h2>
-        <button onClick={(e) => this.handleEdit(e)}>Edit</button>
+      <div className="education--item">
+        <div>
+          <p>
+            {this.state.from} - {this.state.to}
+          </p>
+        </div>
+        <div className="school--info">
+          <p><span className="bold">{this.state.diploma}</span></p>
+          <p>{this.state.school}</p>
+        </div>
+        <p><button onClick={(e) => this.handleEdit(e)}>Edit</button></p>
       </div>
     );
 

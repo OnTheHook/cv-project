@@ -106,7 +106,7 @@ export default class Skills extends Component {
     );
     return (
       <div>
-      <h1>Skills</h1>
+      <h2 className="section--title">Skills</h2>
       {!this.state.isSubmitted && form}
       {this.state.isSubmitted && final}
       </div>

@@ -68,7 +68,7 @@ export default class Experience extends Component {
 
     return (
       <div>
-        <h1>Experience</h1>
+        <h2 className="section--title">Experience</h2>
         <button onClick={this.handleAddExperience}>
           Add Work Experience
         </button>

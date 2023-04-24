@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  background-color: #D3D3D3;
+  min-width: 100%;
+  text-align: center;
+  padding: 20px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  width: 70%;
+}
+.name {
+  font-size: 54px;
+  font-weight: bold;
+}
+.section--title {
+  background-color: #baeaff;
+  text-transform: uppercase;
+}
+
+.education--item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: max-content max-content;
+}
+
+.education--item .bold {
+  font-weight: bold;
+}
+
+.school--info {
+  border-left: black 2px solid;
+  padding-left: 10px;
+}
+
+.experience--item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: max-content max-content;
+}
+
+.experience--item .bold {
+  font-weight: bold;
+}
+
+.experience--info {
+  border-left: black 2px solid;
+  padding-left: 10px;
 }

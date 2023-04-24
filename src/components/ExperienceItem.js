@@ -63,7 +63,7 @@ export default class ExperienceItem extends Component {
         </p>
         <p>
           <label>
-            Tasks:
+            Description:
             <input
               type="text"
               name="tasks"
@@ -76,7 +76,7 @@ export default class ExperienceItem extends Component {
           <label>
             From:
             <input
-              type="date"
+              type="text"
               name="from"
               value={this.state.from}
               onChange={(e) => this.handleChange(e)}
@@ -87,7 +87,7 @@ export default class ExperienceItem extends Component {
           <label>
             To:
             <input
-              type="date"
+              type="text"
               name="to"
               value={this.state.to}
               onChange={(e) => this.handleChange(e)}
@@ -96,19 +96,30 @@ export default class ExperienceItem extends Component {
         </p>
         <p>
           <button onClick={(e) => this.handleSubmit(e)}>Submit</button>
-          <button onClick={(e) => this.props.onDelete(e, this.props.id)}>Delete</button>
+          <button onClick={(e) => this.props.onDelete(e, this.props.id)}>
+            Delete
+          </button>
         </p>
       </form>
     );
 
     let final = (
-      <div>
-       <h2>Company: {this.state.company}</h2>
-       <h2>Title: {this.state.title}</h2>
-       <h2>Tasks: {this.state.tasks}</h2>
-       <h2>From: {this.state.from}</h2>
-       <h2>To {this.state.to}</h2>
-       <button onClick={(e) => this.handleEdit(e)}>Edit</button>
+      <div className="experience--item">
+        <div>
+          <p>
+            {this.state.from} - {this.state.to}
+          </p>
+        </div>
+        <div className="experience--info">
+          <p>
+            <span className="bold">{this.state.title}</span>
+          </p>
+          <p>{this.state.company}</p>
+          <p>{this.state.tasks}</p>
+        </div>
+        <p>
+          <button onClick={(e) => this.handleEdit(e)}>Edit</button>
+        </p>
       </div>
     );
     return (

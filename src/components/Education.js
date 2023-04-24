@@ -11,10 +11,10 @@ export default class Education extends Component {
       education: [
         {
           key: uuidv4(),
-          school: "abc",
-          diploma: "engineering",
-          from: "2020",
-          to: "2024",
+          school: "",
+          diploma: "",
+          from: "",
+          to: "",
         },
       ],
     };
@@ -64,7 +64,7 @@ export default class Education extends Component {
 
     return (
       <div>
-        <h1>Education</h1>
+        <h2 className="section--title">Education</h2>
         <button onClick={this.handleAddEducation}>
           Add Education Experience
         </button>

@@ -47,97 +47,104 @@ class Profile extends Component {
 
   render() {
     let form = (
-      <form action="#">
-        <p>
-          <label>
-            First Name:
-            <input
-              type="text"
-              value={this.state.firstName}
-              onChange={(e) => this.handleChange(e)}
-              name="firstName"
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Last Name:
-            <input
-              type="text"
-              value={this.state.lastName}
-              onChange={(e) => this.handleChange(e)}
-              name="lastName"
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Address:
-            <input
-              type="text"
-              value={this.state.address}
-              onChange={(e) => this.handleChange(e)}
-              name="address"
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Email:
-            <input
-              type="email"
-              value={this.state.email}
-              onChange={(e) => this.handleChange(e)}
-              name="email"
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Phone:
-            <input
-              type="tel"
-              value={this.state.phone}
-              onChange={(e) => this.handleChange(e)}
-              name="phone"
-            />
-          </label>
-        </p>
-        <p>
-          Description:
-          <textarea
-            cols="100"
-            rows="20"
-            onChange={(e) => this.handleTextAreaChange(e)}
-            value={this.state.description}
-          ></textarea>
-        </p>
-
-        <button
-          className="profile--submit"
-          onClick={(e) => this.handleSubmit(e)}
-        >
-          Submit
-        </button>
-      </form>
+      <div>
+        <h1>Profile</h1>
+        <form action="#">
+          <p>
+            <label>
+              First Name:
+              <input
+                type="text"
+                value={this.state.firstName}
+                onChange={(e) => this.handleChange(e)}
+                name="firstName"
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Last Name:
+              <input
+                type="text"
+                value={this.state.lastName}
+                onChange={(e) => this.handleChange(e)}
+                name="lastName"
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Address:
+              <input
+                type="text"
+                value={this.state.address}
+                onChange={(e) => this.handleChange(e)}
+                name="address"
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Email:
+              <input
+                type="email"
+                value={this.state.email}
+                onChange={(e) => this.handleChange(e)}
+                name="email"
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Phone:
+              <input
+                type="tel"
+                value={this.state.phone}
+                onChange={(e) => this.handleChange(e)}
+                name="phone"
+              />
+            </label>
+          </p>
+          <p>
+            Description:
+            <textarea
+              cols="100"
+              rows="20"
+              onChange={(e) => this.handleTextAreaChange(e)}
+              value={this.state.description}
+            ></textarea>
+          </p>
+          <button
+            className="profile--submit"
+            onClick={(e) => this.handleSubmit(e)}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     );
 
     let final = (
       <div>
-        <h2>
+        <h2 className="name">
           {this.state.firstName} {this.state.lastName}
         </h2>
-        <p>{this.state.description}</p>
-        <p>
-          Telephone: {this.state.phone} Email: {this.state.email}
-        </p>
-        <p>Address: {this.state.address} </p>
+        <div className="info">
+          {this.state.phone} <span>&#183;</span> {this.state.email}{" "}
+          <span>&#183;</span> {this.state.address}
+        </div>
+
+        <div className="summary">
+          <h2 className="section--title">SUMMARY</h2>
+          <p>{this.state.description}</p>
+        </div>
+
         <button onClick={(e) => this.handleEdit(e)}>Edit</button>
       </div>
     );
     return (
       <div>
-        <h1>Profile</h1>
+        
         {!this.state.isSubmitted && form}
         {this.state.isSubmitted && final}
       </div>
