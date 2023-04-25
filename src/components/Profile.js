@@ -48,7 +48,7 @@ class Profile extends Component {
   render() {
     let form = (
       <div>
-        <h1>Profile</h1>
+        <h2 className="section--title">Profile</h2>
         <form action="#">
           <p>
             <label>

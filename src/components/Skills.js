@@ -87,8 +87,8 @@ export default class Skills extends Component {
             value={skill.text}
             type="text"
             id="skillInput"
-          />
-          <button type="submit">Add Skill</button>
+          />&nbsp;
+          <button type="submit">+ Add Skill</button>
         </form>
         <button onClick={(e) => this.handleSubmit(e)}>Submit</button>
       </div>

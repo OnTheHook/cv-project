@@ -70,7 +70,7 @@ export default class Experience extends Component {
       <div>
         <h2 className="section--title">Experience</h2>
         <button onClick={this.handleAddExperience}>
-          Add Work Experience
+          + Add Work Experience
         </button>
         {experienceItems}
       </div>

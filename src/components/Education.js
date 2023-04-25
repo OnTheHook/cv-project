@@ -63,10 +63,10 @@ export default class Education extends Component {
     });
 
     return (
-      <div>
+      <div className="education">
         <h2 className="section--title">Education</h2>
-        <button onClick={this.handleAddEducation}>
-          Add Education Experience
+        <button className="add" onClick={this.handleAddEducation}>
+          + Add Education Experience
         </button>
         {educationItems}
       </div>

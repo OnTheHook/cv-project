@@ -102,7 +102,7 @@ export default class EducationItem extends Component {
           <p><span className="bold">{this.state.diploma}</span></p>
           <p>{this.state.school}</p>
         </div>
-        <p><button onClick={(e) => this.handleEdit(e)}>Edit</button></p>
+        <p className="edit"><button onClick={(e) => this.handleEdit(e)}>Edit</button></p>
       </div>
     );
 
