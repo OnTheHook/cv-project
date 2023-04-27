@@ -1,2 +1,2 @@
 # cv-project
-This is a project assigned by The Odin Project course. The goal of the project is to create a CV or resume website where you can enter and edit information about yourself which will be displayed on the website.
+This is a project assigned by The Odin Project course. The goal of the project is to create a CV or resume website where you can enter and edit information about yourself which will be displayed on the website. This is all done using react.
